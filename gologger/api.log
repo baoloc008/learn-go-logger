@@ -1,0 +1,9 @@
+2020/04/09 17:03:04 Error fetching url www.google.com : Get www.google.com: unsupported protocol scheme ""
+2020/04/09 17:03:04 Status Code for http://www.google.com : 200 OK
+2020/04/09 17:09:28 Error fetching url www.google.com : Get www.google.com: unsupported protocol scheme ""
+2020/04/09 17:10:19 Error fetching url www.google.com : Get www.google.com: unsupported protocol scheme ""
+2020/04/09 17:10:19 Fatal log
+2020/04/09 17:11:55 Error fetching url www.google.com : Get www.google.com: unsupported protocol scheme ""
+2020/04/09 17:11:55 Panic log
+2020/04/09 17:21:28 Error fetching url www.google.com : Get www.google.com: unsupported protocol scheme ""
+2020/04/09 17:21:28 Status Code for http://www.google.com : 200 OK
