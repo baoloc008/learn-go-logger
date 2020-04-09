@@ -5,9 +5,13 @@ import (
 	"go.uber.org/zap/zapcore"
 	"net/http"
 	"os"
+	"sync"
 )
 
-var sugarLogger *zap.SugaredLogger
+var (
+	sugarLogger *zap.SugaredLogger
+	doOnce      sync.Once
+)
 
 func main() {
 	InitLogger()
@@ -17,11 +21,14 @@ func main() {
 }
 
 func InitLogger() {
-	writerSyncer := getLogWriter()
-	encoder := getEncoder()
-	core := zapcore.NewCore(encoder, writerSyncer, zapcore.DebugLevel)
-	logger := zap.New(core, zap.AddCaller())
-	sugarLogger = logger.Sugar()
+	// Run Code Once on First Load (Concurrency Safe)
+	doOnce.Do(func() {
+		writerSyncer := getLogWriter()
+		encoder := getEncoder()
+		core := zapcore.NewCore(encoder, writerSyncer, zapcore.DebugLevel)
+		logger := zap.New(core, zap.AddCaller())
+		sugarLogger = logger.Sugar()
+	})
 }
 
 func getEncoder() zapcore.Encoder {
