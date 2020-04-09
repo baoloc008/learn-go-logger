@@ -2,3 +2,19 @@
 {"level":"ERROR","ts":"2020-04-09T19:38:22.321+0700","caller":"custom/main.go:62","msg":"Error fetching URL www.google.com : Error = Get www.google.com: unsupported protocol scheme \"\""}
 {"level":"DEBUG","ts":"2020-04-09T19:38:22.321+0700","caller":"custom/main.go:59","msg":"Trying to hit GET request for http://www.google.com"}
 {"level":"INFO","ts":"2020-04-09T19:38:22.493+0700","caller":"custom/main.go:64","msg":"Success! statusCode = 200 OK for URL http://www.google.com"}
+{"level":"DEBUG","ts":"2020-04-09T19:52:19.629+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for www.google.com"}
+{"level":"ERROR","ts":"2020-04-09T19:52:19.630+0700","caller":"custom/main.go:67","msg":"Error fetching URL www.google.com : Error = Get www.google.com: unsupported protocol scheme \"\""}
+{"level":"DEBUG","ts":"2020-04-09T19:52:19.630+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for http://www.google.com"}
+{"level":"INFO","ts":"2020-04-09T19:52:19.825+0700","caller":"custom/main.go:69","msg":"Success! statusCode = 200 OK for URL http://www.google.com"}
+{"level":"DEBUG","ts":"2020-04-09T19:52:29.998+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for www.google.com"}
+{"level":"ERROR","ts":"2020-04-09T19:52:29.999+0700","caller":"custom/main.go:67","msg":"Error fetching URL www.google.com : Error = Get www.google.com: unsupported protocol scheme \"\""}
+{"level":"DEBUG","ts":"2020-04-09T19:52:29.999+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for http://www.google.com"}
+{"level":"INFO","ts":"2020-04-09T19:52:30.201+0700","caller":"custom/main.go:69","msg":"Success! statusCode = 200 OK for URL http://www.google.com"}
+{"level":"DEBUG","ts":"2020-04-09T19:53:40.200+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for www.google.com"}
+{"level":"ERROR","ts":"2020-04-09T19:53:40.200+0700","caller":"custom/main.go:67","msg":"Error fetching URL www.google.com : Error = Get www.google.com: unsupported protocol scheme \"\""}
+{"level":"DEBUG","ts":"2020-04-09T19:53:40.200+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for http://www.google.com"}
+{"level":"INFO","ts":"2020-04-09T19:53:40.362+0700","caller":"custom/main.go:69","msg":"Success! statusCode = 200 OK for URL http://www.google.com"}
+{"level":"DEBUG","ts":"2020-04-09T19:53:49.949+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for www.google.com"}
+{"level":"ERROR","ts":"2020-04-09T19:53:49.950+0700","caller":"custom/main.go:67","msg":"Error fetching URL www.google.com : Error = Get www.google.com: unsupported protocol scheme \"\""}
+{"level":"DEBUG","ts":"2020-04-09T19:53:49.950+0700","caller":"custom/main.go:64","msg":"Trying to hit GET request for http://www.google.com"}
+{"level":"INFO","ts":"2020-04-09T19:53:50.127+0700","caller":"custom/main.go:69","msg":"Success! statusCode = 200 OK for URL http://www.google.com"}

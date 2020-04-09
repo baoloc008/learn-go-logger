@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"net/http"
-	"os"
 	"sync"
 )
 
@@ -50,9 +50,14 @@ func getEncoder() zapcore.Encoder {
 }
 
 func getLogWriter() zapcore.WriteSyncer {
-	//return os.Stdout // write to console
-	file, _ := os.Create("./zap/custom/test.log")
-	return zapcore.AddSync(file)
+	lumberJackLogger := &lumberjack.Logger{
+		Filename:   "./zap/custom/test.log", // location of log file
+		MaxSize:    10,                      // maximum size of log file in MBs, before it is rotated
+		MaxBackups: 5,                       // maximum no. of old files to retain
+		MaxAge:     30,                      // maximum number of days it will retain old files
+		Compress:   false,                   // whether to compress/archive old files
+	}
+	return zapcore.AddSync(lumberJackLogger)
 }
 
 func SimpleHttpGet(url string) {
