@@ -7,7 +7,7 @@ import (
 
 var logger *zap.Logger
 
-func test() {
+func main() {
 	InitLogger()
 	defer logger.Sync()
 	SimpleHttpGet("www.google.com")

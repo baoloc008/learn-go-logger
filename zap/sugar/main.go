@@ -8,16 +8,16 @@ import (
 var sugarLogger *zap.SugaredLogger
 
 func main() {
-	InitSugarLogger()
+	InitLogger()
 	defer sugarLogger.Sync()
-	SimpleHttpGetWithSugarLogger("www.google.com")
-	SimpleHttpGetWithSugarLogger("http://www.google.com")
+	SimpleHttpGet("www.google.com")
+	SimpleHttpGet("http://www.google.com")
 }
 
-func InitSugarLogger() { logger, _ := zap.NewProduction()
+func InitLogger() { logger, _ := zap.NewProduction()
 	sugarLogger = logger.Sugar() }
 
-func SimpleHttpGetWithSugarLogger(url string) {
+func SimpleHttpGet(url string) {
 	sugarLogger.Debugf("Trying to hit GET request for %s", url)
 	resp, err := http.Get(url)
 	if err != nil {
