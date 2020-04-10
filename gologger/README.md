@@ -1,6 +1,6 @@
 # Pros and Cons of Go Logger
 ## Pros
-The biggest advantages is that it is very simple to use. We can set any io.Writer to log output and send write logs to it.
+The biggest advantages is that it is very simple to use. We can set any `io.Writer` to log output and send write logs to it.
 
 ## Cons
 - Basic Log Levels only

@@ -14,8 +14,10 @@ func main() {
 	SimpleHttpGet("http://www.google.com")
 }
 
-func InitLogger() { logger, _ := zap.NewProduction()
-	sugarLogger = logger.Sugar() }
+func InitLogger() {
+	logger, _ := zap.NewProduction()
+	sugarLogger = logger.Sugar()
+}
 
 func SimpleHttpGet(url string) {
 	sugarLogger.Debugf("Trying to hit GET request for %s", url)
